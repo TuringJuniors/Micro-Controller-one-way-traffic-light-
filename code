@@ -21,19 +21,19 @@ void loop()
   delay(1000); // Wait for 1000 millisecond(s)
   // turn the RED LED off by making the voltage LOW
   digitalWrite(RED, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
+  
 
   // turn the GREEN LED on (HIGH is the voltage level)
   digitalWrite(GREEN, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
   // turn the GREEN LED off by making the voltage LOW
   digitalWrite(GREEN, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
+  
 
   // turn the YELLOW LED on (HIGH is the voltage level)
   digitalWrite(YELLOW, HIGH);
   delay(1000); // Wait for 1000 millisecond(s)
   // turn the YELLOW LED off by making the voltage LOW
   digitalWrite(YELLOW, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
+  
 }
