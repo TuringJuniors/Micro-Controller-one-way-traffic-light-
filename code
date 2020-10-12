@@ -13,27 +13,27 @@ void setup()
 void loop()
 {
   
-  digitalWrite(13, HIGH); // turn the RED LED on (HIGH is the voltage level)
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, HIGH);  // turn the RED LED on (HIGH is the voltage level)
+  delay(1000);   // Wait for 1000 millisecond(s)
   
-  digitalWrite(13, LOW);// turn the RED LED off by making the voltage LOW
+  digitalWrite(13, LOW);   // turn the RED LED off by making the voltage LOW
   delay(1000); // Wait for 1000 millisecond(s)
  
-  digitalWrite(12, HIGH); // turn the YELLOW LED on (HIGH is the voltage level)
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(12, HIGH);  // turn the YELLOW LED on (HIGH is the voltage level)
+  delay(1000);  // Wait for 1000 millisecond(s)
  
-  digitalWrite(12, LOW); // turn the YELLOW LED off by making the voltage LOW
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(12, LOW);  // turn the YELLOW LED off by making the voltage LOW
+  delay(1000);  // Wait for 1000 millisecond(s)
  
-  digitalWrite(11, HIGH); // turn the GREEN LED on (HIGH is the voltage level)
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(11, HIGH);  // turn the GREEN LED on (HIGH is the voltage level)
+  delay(1000);  // Wait for 1000 millisecond(s)
   
-  digitalWrite(11, LOW);// turn the GREEN LED off by making the voltage LOW
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(11, LOW);  // turn the GREEN LED off by making the voltage LOW
+  delay(1000);   // Wait for 1000 millisecond(s)
    
-  digitalWrite(12, HIGH);// turn the YELLOW LED on (HIGH is the voltage level)
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(12, HIGH);  // turn the YELLOW LED on (HIGH is the voltage level)
+  delay(1000);   // Wait for 1000 millisecond(s)
   
-  digitalWrite(12, LOW);// turn the YELLOW LED off by making the voltage LOW
-  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(12, LOW);   // turn the YELLOW LED off by making the voltage LOW
+  delay(1000);  // Wait for 1000 millisecond(s)
 }
