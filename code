@@ -23,8 +23,11 @@ void LED::off()
 #define RED 13
 #define GREEN 11
 #define YELLOW 12
-
-
+void move();
+void ready_to_stop();
+void stop();
+void ready_to_move();
+LED red,yellow,green;
 void setup()
 {
 
@@ -37,7 +40,7 @@ pinMode(11,OUTPUT);
 void loop()
 {
 
- LED red,yellow,green;
+
 red.pin=RED;
 red.duration=1000;
 green.pin=GREEN;
@@ -45,15 +48,33 @@ green.duration=1000;
 yellow.pin=YELLOW;
 yellow.duration=1000;
 
-red.on();
-delay(red.duration);
-red.off();
-yellow.on();
-delay(yellow.duration);
-yellow.off();
+
+move();
+ready_to_stop();
+stop();
+ready_to_move();
+}
+
+void move()
+{
 green.on();
 delay(green.duration);
 green.off();
+}
+void ready_to_stop()
+{
+yellow.on();
+delay(yellow.duration);
+yellow.off();
+}
+void stop()
+{
+red.on();
+delay(red.duration);
+red.off();
+}
+void ready_to_move()
+{
 yellow.on();
 delay(yellow.duration);
 yellow.off();
