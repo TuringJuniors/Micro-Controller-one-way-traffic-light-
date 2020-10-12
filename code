@@ -1,39 +1,66 @@
-/*
-  This program blinks pins 13,12 and 11 of the Arduino (the
-  built-in LEDs)
-*/
+class LED   
+{
+  public:
+    int pin;
+    int duration;   
+    void on();
+    void off();
+};
+
+
+
+void LED::on()
+{
+  digitalWrite(pin,HIGH);
+}
+
+
+void LED::off()
+{
+  digitalWrite(pin,LOW);
+}
+
+#define RED 13
+#define GREEN 11
+#define YELLOW 12
+
 
 void setup()
 {
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-    pinMode(11, OUTPUT);
+
+
+pinMode(13,OUTPUT);
+pinMode(12,OUTPUT);
+pinMode(11,OUTPUT);
 }
 
 void loop()
 {
-  
-  digitalWrite(13, HIGH);  // turn the RED LED on (HIGH is the voltage level)
-  delay(1000);   // Wait for 1000 millisecond(s)
-  
-  digitalWrite(13, LOW);   // turn the RED LED off by making the voltage LOW
-  delay(1000); // Wait for 1000 millisecond(s)
- 
-  digitalWrite(12, HIGH);  // turn the YELLOW LED on (HIGH is the voltage level)
-  delay(1000);  // Wait for 1000 millisecond(s)
- 
-  digitalWrite(12, LOW);  // turn the YELLOW LED off by making the voltage LOW
-  delay(1000);  // Wait for 1000 millisecond(s)
- 
-  digitalWrite(11, HIGH);  // turn the GREEN LED on (HIGH is the voltage level)
-  delay(1000);  // Wait for 1000 millisecond(s)
-  
-  digitalWrite(11, LOW);  // turn the GREEN LED off by making the voltage LOW
-  delay(1000);   // Wait for 1000 millisecond(s)
-   
-  digitalWrite(12, HIGH);  // turn the YELLOW LED on (HIGH is the voltage level)
-  delay(1000);   // Wait for 1000 millisecond(s)
-  
-  digitalWrite(12, LOW);   // turn the YELLOW LED off by making the voltage LOW
-  delay(1000);  // Wait for 1000 millisecond(s)
+
+LED red,yellow,green;
+red.pin=RED;
+red.duration=1000;         // Wait for 1000 millisecond(s)
+green.pin=GREEN;
+green.duration=1000;       // Wait for 1000 millisecond(s)
+yellow.pin=YELLOW;
+yellow.duration=1000;      // Wait for 1000 millisecond(s)
+
+green.on();                // turn the GREEN LED on
+delay(green.duration);     // turn the YELLOW LED on
+green.off();               // turn the GREEN LED off
+yellow.on();
+delay(yellow.duration);
+yellow.off();              // turn the YELLOW LED off
+red.on();                  // turn the RED LED on
+delay(red.duration);
+red.off();                 // turn the RED LED off
+yellow.on();               // turn the YELLOW LED on
+delay(yellow.duration);
+yellow.off();              // turn the YELLOW LED off
+
+
 }
+
+
+
+
