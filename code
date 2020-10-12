@@ -1,39 +1,61 @@
-/*
-  This program blinks pin 13, pin 12, pin 11 of the Arduino (the
-  built-in LEDs)
-*/
+class LED
+{
+  public:
+    int pin;
+    int duration;
+    void on();
+    void off();
+};
+
+
+
+void LED::on()
+{
+  digitalWrite(pin,HIGH);
+}
+
+
+void LED::off()
+{
+  digitalWrite(pin,LOW);
+}
 
 #define RED 13
-#define YELLOW 12
 #define GREEN 11
+#define YELLOW 12
+
 
 void setup()
 {
-  pinMode(13, OUTPUT);
-  pinMode(12, OUTPUT);
-  pinMode(11, OUTPUT);
+
+
+pinMode(13,OUTPUT);
+pinMode(12,OUTPUT);
+pinMode(11,OUTPUT);
 }
 
 void loop()
 {
-  // turn the RED LED on (HIGH is the voltage level)
-  digitalWrite(RED, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  // turn the RED LED off by making the voltage LOW
-  digitalWrite(RED, LOW);
-  
 
-  // turn the GREEN LED on (HIGH is the voltage level)
-  digitalWrite(GREEN, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  // turn the GREEN LED off by making the voltage LOW
-  digitalWrite(GREEN, LOW);
-  
+ LED red,yellow,green;
+red.pin=RED;
+red.duration=1000;
+green.pin=GREEN;
+green.duration=1000;
+yellow.pin=YELLOW;
+yellow.duration=1000;
 
-  // turn the YELLOW LED on (HIGH is the voltage level)
-  digitalWrite(YELLOW, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  // turn the YELLOW LED off by making the voltage LOW
-  digitalWrite(YELLOW, LOW);
-  
+red.on();
+delay(red.duration);
+red.off();
+green.on();
+delay(green.duration);
+green.off();
+yellow.on();
+delay(yellow.duration);
+yellow.off();
 }
+
+
+
+
