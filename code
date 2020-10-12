@@ -1,85 +1,39 @@
-class LED
-{
-  public:
-    int pin;
-    int duration;
-    void on();
-    void off();
-};
+/*
+  This program blinks pins 13,12 and 11 of the Arduino (the
+  built-in LEDs)
+*/
 
-
-
-void LED::on()
-{
-  digitalWrite(pin,HIGH);
-}
-
-
-void LED::off()
-{
-  digitalWrite(pin,LOW);
-}
-
-#define RED 13
-#define GREEN 11
-#define YELLOW 12
-void move();
-void ready_to_stop();
-void stop();
-void ready_to_move();
-LED red,yellow,green;
 void setup()
 {
-
-
-pinMode(13,OUTPUT);
-pinMode(12,OUTPUT);
-pinMode(11,OUTPUT);
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+    pinMode(11, OUTPUT);
 }
 
 void loop()
 {
-
-
-red.pin=RED;
-red.duration=1000;
-green.pin=GREEN;
-green.duration=1000;
-yellow.pin=YELLOW;
-yellow.duration=1000;
-
-
-move();
-ready_to_stop();
-stop();
-ready_to_move();
+  // turn the RED LED on (HIGH is the voltage level)
+  digitalWrite(13, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  // turn the RED LED off by making the voltage LOW
+  digitalWrite(13, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  // turn the YELLOW LED on (HIGH is the voltage level)
+  digitalWrite(12, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  // turn the YELLOW LED off by making the voltage LOW
+  digitalWrite(12, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+  // turn the GREEN LED on (HIGH is the voltage level)
+  digitalWrite(11, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  // turn the GREEN LED off by making the voltage LOW
+  digitalWrite(11, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
+   // turn the YELLOW LED on (HIGH is the voltage level)
+  digitalWrite(12, HIGH);
+  delay(1000); // Wait for 1000 millisecond(s)
+  // turn the YELLOW LED off by making the voltage LOW
+  digitalWrite(12, LOW);
+  delay(1000); // Wait for 1000 millisecond(s)
 }
-
-void move()
-{
-green.on();
-delay(green.duration);
-green.off();
-}
-void ready_to_stop()
-{
-yellow.on();
-delay(yellow.duration);
-yellow.off();
-}
-void stop()
-{
-red.on();
-delay(red.duration);
-red.off();
-}
-void ready_to_move()
-{
-yellow.on();
-delay(yellow.duration);
-yellow.off();
-}
-
-
-
-
